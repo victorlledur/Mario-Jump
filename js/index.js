@@ -3,8 +3,14 @@ const pipe = document.querySelector(".pipe");
 const clouds = document.querySelector(".clouds");
 const gameOver = document.querySelector("h1")
 const avisoGameOver = document.querySelector(".aviso-restart")
+const avisoInicio = document.querySelector(".aviso")
 
-
+window.addEventListener("click", () =>{
+    
+    pipe.style.animationPlayState = "running"
+    avisoInicio.style.display = "none"
+    
+})
 
 const jump = () => {
     mario.classList.add("jump");
@@ -18,7 +24,7 @@ const loop = setInterval(() =>{
     const pipePosition = pipe.offsetLeft;
     const marioPosition = +window.getComputedStyle(mario).bottom.replace("px", "");
     const cloudsPosition = clouds.offsetLeft;
-
+    
     if(pipePosition <= 120 && pipePosition > 0 && marioPosition < 100){
         pipe.style.animation = "none";
         pipe.style.left = `${pipePosition}px`;
@@ -32,7 +38,6 @@ const loop = setInterval(() =>{
         mario.style.marginLeft = "50px";
 
         gameOver.style.display = "block"
-
         avisoGameOver.style.display = "block"
 
         music.pause()

@@ -19,6 +19,7 @@
     bottom: 0;
     width: 80px;
     animation: pipe-animation 1.5s infinite linear;
+    animation-play-state: paused
 }
 
 .mario {
@@ -74,6 +75,17 @@
 h2 {
     color: white;
     font-size: 35px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(15, 209, 102);
+}
+.aviso{
+    position: absolute;
+    color: rgb(223, 213, 213);
+    font-size: 45px;
+    padding-left: 36%;
+    padding-top: 200px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(189, 42, 42);
 }
 
 @keyframes pipe-animation {
