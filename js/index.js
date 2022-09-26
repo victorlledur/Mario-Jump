@@ -4,12 +4,16 @@ const clouds = document.querySelector(".clouds");
 const gameOver = document.querySelector("h1")
 const avisoGameOver = document.querySelector(".aviso-restart")
 const avisoInicio = document.querySelector(".aviso")
+const logo = document.querySelector(".logo")
+const music = new Audio('./audio/music.mp3');
+music.loop = true;
 
 window.addEventListener("click", () =>{
     
-    pipe.style.animationPlayState = "running"
-    avisoInicio.style.display = "none"
-    
+    pipe.style.animationPlayState = "running";
+    avisoInicio.style.display = "none";
+    logo.style.display = "none";
+    music.play();   
 })
 
 const jump = () => {
@@ -55,8 +59,6 @@ document.addEventListener("keydown", event => {
     }
   })
 
-const music = new Audio('./audio/music.mp3');
-music.play();
-music.loop = true;
+
 
 const gameoverSound = new Audio('./audio/gameover.mp3');
